@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorAccent">
+
+   <ImageView
+       android:layout_width="200dp"
+       android:layout_height="200dp"
+       android:id="@+id/image"
+       android:layout_alignParentTop="true"
+       android:layout_marginLeft="100dp"
+       android:src="@drawable/coffe"
+/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Toppings:"
+        android:layout_below="@+id/image"
+        android:layout_marginLeft="125dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/choose"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cream"
+        android:layout_below="@+id/choose"
+        android:layout_marginLeft="100dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/cr"
+        android:onClick="oncheck"
+        android:buttonTint="@color/colorPrimary"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chocolate"
+        android:layout_toRightOf="@id/cr"
+        android:id="@+id/ch"
+        android:layout_below="@id/choose"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:onClick="oncheck"
+        android:buttonTint="@color/colorPrimary" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/ch"
+        android:layout_marginLeft="160dp"
+        android:id="@+id/qua"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:layout_below="@id/qua"
+        android:textSize="20dp"
+        android:layout_marginLeft="70dp"
+        android:id="@+id/in"/>
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_toRightOf="@id/in"
+        android:layout_below="@+id/qua"
+        android:id="@+id/num"
+        android:paddingLeft="35dp"
+        android:paddingTop="16dp"
+
+
+      />
+    <Button
+        android:id="@+id/order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORDER"
+        android:textSize="20dp"
+        android:textStyle="bold"
+android:layout_centerInParent="true"
+
+/>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_below="@id/qua"
+        android:textSize="20dp"
+
+        android:layout_toRightOf="@id/num"
+        android:id="@+id/de"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="ORDER SUMMARY:"
+    android:layout_below="@id/order"
+    android:layout_centerInParent="true"
+    android:textSize="20dp"
+    android:textStyle="bold"
+    android:layout_marginTop="20dp"
+
+    android:id="@+id/summ"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/summ"
+        android:text="Add Whippd Cream?"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/sumcr"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/sumcr"
+        android:layout_below="@id/summ"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+    android:textSize="20dp"
+    android:id="@+id/yes" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sumcr"
+        android:text="Add Chocolate?"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/sumch"
+        android:layout_marginRight="5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/sumch"
+        android:layout_below="@id/sumcr"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/no" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sumch"
+        android:text="Quantity:"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/sumqua"
+        android:layout_marginRight="5dp"
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/sumqua"
+        android:layout_below="@id/sumch"
+        android:textSize="20dp"
+        android:id="@+id/ed_qua"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sumqua"
+        android:text="price:"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/price"
+ />
+
+    <TextView
+        android:id="@+id/ed_pri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sumqua"
+        android:layout_toRightOf="@+id/price"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/price"
+        android:text="THANK YOU!"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/thank"
+        />
+</RelativeLayout>
